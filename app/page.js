@@ -1,7 +1,7 @@
 "use client";
 import { submitAction } from '@/actions/form';
 import { useState, useRef } from 'react';
-import { FiUser, FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiUser, FiEye, FiEyeOff, FiLogIn} from 'react-icons/fi';
 
 export default function Home() {
   const formRef = useRef(null);
@@ -31,7 +31,7 @@ export default function Home() {
                 name="name"
                 id="name"
                 placeholder="Name"
-                className="w-full pr-10 pl-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full text-cen pr-10 pl-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
                 <FiUser />
@@ -59,9 +59,10 @@ export default function Home() {
           <div>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-white bg-blue-500 border border-transparent rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex text-center w-2/2 px-4 py-2 text-white bg-blue-500 border border-transparent rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 justify-end items-center"
             >
               Submit
+              <FiLogIn  className='ml-2'/>
             </button>
           </div>
         </form>
